@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', ()=>{
     
-
     class Items {
         constructor(name,photo,price){
             this.name = name
@@ -35,5 +34,41 @@ window.addEventListener('DOMContentLoaded', ()=>{
     fourthItem.createElement()
     fivesItem.createElement()
     sixItem.createElement()
+    getItem()
+
+
+    let counter = 0
+    function getItem(){
+        const items = document.querySelector('.products')
+        items.addEventListener('click',(event)=>{
+            if(event.target.classList.contains('item-price')){counter++; putCart();console.log(event.target.parent())}
+        })
+    }
+
+    function putCart(){
+        let cart = document.querySelector('#cart')
+        cart.innerHTML = `${counter} items`
+    }
+    const modal = document.querySelector('.modal')
+
+    function openModal(){
+        const cartBtn = document.querySelector('#cart')
+        cartBtn.addEventListener('click',()=>{
+            modal.style.display = "block"
+        })
+    }
+    function closeModal(){
+        const closeBtn = document.querySelector('.close')
+        closeBtn.addEventListener('click',()=>{
+            modal.style.display = "none"
+        })
+    }
+
+    function putItem(item){
+        console.log(item)
+    }
+    openModal()
+    closeModal()
+
 
 })  
