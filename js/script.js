@@ -34,41 +34,56 @@ window.addEventListener('DOMContentLoaded', ()=>{
     fourthItem.createElement()
     fivesItem.createElement()
     sixItem.createElement()
-    getItem()
 
+
+    const closeBtn = document.querySelector('.close')
+    const cartBtn = document.querySelector('#cart')
+    const cart = document.querySelector('#cart')
+    const items = document.querySelector('.products')
+    const modal = document.querySelector('.modal')
+    const modalItems = document.querySelector('.modal-items')
 
     let counter = 0
     function getItem(){
-        const items = document.querySelector('.products')
         items.addEventListener('click',(event)=>{
-            if(event.target.classList.contains('item-price')){counter++; putCart();console.log(event.target.parent())}
+            if(event.target.classList.contains('item-price')){
+                counter++; 
+                putCart();
+                putItem(event.target.parentElement.cloneNode(true))
+            }
         })
     }
 
     function putCart(){
-        let cart = document.querySelector('#cart')
         cart.innerHTML = `${counter} items`
     }
-    const modal = document.querySelector('.modal')
 
     function openModal(){
-        const cartBtn = document.querySelector('#cart')
         cartBtn.addEventListener('click',()=>{
             modal.style.display = "block"
         })
     }
     function closeModal(){
-        const closeBtn = document.querySelector('.close')
         closeBtn.addEventListener('click',()=>{
             modal.style.display = "none"
         })
     }
 
     function putItem(item){
-        console.log(item)
+        modalItems.appendChild(item)
+        deleteItem(item)
     }
+
+    function deleteItem(item){
+        item.addEventListener('click',()=>{
+            item.remove()
+            counter--;
+            putCart()
+        })
+        // modalItems.remove(item)
+    }
+
+    getItem()
     openModal()
     closeModal()
-
-
 })  
