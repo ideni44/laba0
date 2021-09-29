@@ -43,13 +43,17 @@ window.addEventListener('DOMContentLoaded', ()=>{
     const modal = document.querySelector('.modal')
     const modalItems = document.querySelector('.modal-items')
 
+
+    let currentItem;
     let counter = 0
     function getItem(){
         items.addEventListener('click',(event)=>{
-            if(event.target.classList.contains('item-price')){
+            if(event.target.classList.contains('item-price') || event.target.classList.contains('item_img') || event.target.classList.contains('item_name')){
                 counter++; 
                 putCart();
+                currentItem = event.target.parentElement.cloneNode(true)
                 putItem(event.target.parentElement.cloneNode(true))
+                console.log(event.target.parentElement.cloneNode(true))
             }
         })
     }
