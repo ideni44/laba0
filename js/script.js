@@ -19,6 +19,9 @@ window.addEventListener('DOMContentLoaded', ()=>{
                 `
             productlist.append(item)
         }
+        addCart(){
+            console.log('asd')
+        }
     }
 
     const firstItem = new Items('Air force 1 black', 'assets/blackforce.jfif','120$')
@@ -29,6 +32,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     const sixItem = new Items('Air force 1 w/b', 'assets/whitewithblack.jfif','170$')
 
     firstItem.createElement()
+    firstItem.addCart()
     secondItem.createElement()
     thirdItem.createElement()
     fourthItem.createElement()
@@ -41,7 +45,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     function getItem(){
         const items = document.querySelector('.products')
         items.addEventListener('click',(event)=>{
-            if(event.target.classList.contains('item-price')){counter++; putCart();console.log(event.target.parent())}
+            if(event.target.classList.contains('item-price')){counter++; putCart();putItem(event.target.parentElement)}
         })
     }
 
@@ -59,14 +63,14 @@ window.addEventListener('DOMContentLoaded', ()=>{
     }
     function closeModal(){
         const closeBtn = document.querySelector('.close')
-        closeBtn.addEventListener('click',()=>{
+        closeBtn.addEventListener('click',(event)=>{
             modal.style.display = "none"
+            if(event.target.classList != 'myModal'){console.log('oj')}
         })
     }
 
-    function putItem(item){
-        console.log(item)
-    }
+    const modalContent = document.querySelector('.modal-content')
+    function putItem(item){}
     openModal()
     closeModal()
 
