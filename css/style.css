@@ -1,0 +1,295 @@
+html {
+	scroll-behavior: smooth;
+}
+
+.wrapper{
+	max-width: 960px;
+	margin: 0 auto;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 10px;
+}
+
+.header_content_list a{
+	text-decoration: none;
+	color: #828282;
+}
+
+.header{
+	padding: 41px 0;
+	position: sticky;
+	top: 0;
+	background-color: white;
+
+}
+ 
+.header_content_list{
+	display: flex;
+    justify-content:space-between;
+	align-items: center;
+	font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+
+.header_content_list_button a:hover{
+	color: black;
+}
+
+.about{
+	padding-top: 37px;
+	height: auto;
+	
+}
+
+.aboutme_up{
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	padding-bottom: 30px;
+}
+
+.aboutme_up_name{
+	font-size: 	30px;
+	font-weight: bold;
+	line-height: 40px;
+	color: #070707;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+.aboutme_up_info{
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	color: #070707;
+}
+
+.aboutme_up_country{
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	color: #070707;
+}
+
+.aboutme_down_img{
+	display: flex;
+	align-items: center;
+	width: auto;
+	max-width: 100%;
+	margin-bottom: 5%;
+}
+
+.aboutme_down_img_mobile{
+	display: none;
+}
+
+.info{
+	height: 506px;
+	background-color: #F6F6F6;
+}
+
+.info_section{
+	padding-top: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	font-family: 'Raleway', sans-serif;
+}
+.info_section_h1{
+	font-size: 30px;
+	line-height: 42px;
+	color: #070707;
+	font-weight: bold
+
+}
+.info_section_about{
+	margin: 20px 0;
+	font-size: 18px;
+	line-height: 22px;
+	color:#070707;
+}
+
+
+#info_section_about_1{
+	text-indent: 3em;
+}
+
+.info_section_cv{
+	border: 1px solid white;
+	background-color: black;
+	height: 50px;
+	width: 100%;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.skills_wrap{
+	height: 506px;
+}
+
+.skills_text{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 90px 0;
+}
+
+.skills_text_skils{
+	font-size: 34px;
+	line-height: 42px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	padding-bottom: 70px;
+}
+
+.skills_text_info{
+	font-size: 18px;
+	line-height: 22px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.skills_programs_logo{
+	height: 70px;
+	display: block;
+	margin:0 auto;
+}
+
+.skills_programms{
+	display: flex;
+	justify-content: space-between;
+}
+
+.skills_programms_divs{
+	/* border: 1px solid black; */
+	height: 166px;
+	width: 200px;
+}
+
+.skills_programs_logo_info{
+	text-align: center;
+	padding-top: 25px;
+	font-size: 14px;
+	line-height: 17px;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+.porfolio{
+	background: #F6F6F6;
+}
+.portfolio_info{
+	height: 300px
+}
+
+.portfolio_h1{
+	text-align: center;
+	padding: 110px 0 40px 0;
+	font-size: 34px;
+	line-height: 42px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+}
+
+.portfolio_p{
+	text-align: center;
+	font-size: 20px;
+	line-height: 42px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.contacts{
+	height: 500px;
+}
+
+.contacts_info{
+	text-align: center;
+	padding-top: 110px;
+}
+
+.contacts_info_contact{
+	font-size: 34px;
+	line-height: 42px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+.contacts_info_suggestion{
+	font-size: 18px;
+	line-height: 22px;
+	font-family: 'Raleway', sans-serif;
+	padding-bottom: 30px;
+}
+
+.contacts_info_button{
+	width: 180px;
+	color: white;
+	background-color: black;
+	text-align: center;
+	height: 42px;
+	border: 1px solid black;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-bottom: 80px;
+}
+
+.contacts_links{
+	max-width: 340px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 0 10px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.contacts_links_img{
+	height: 50px;
+}
+
+@media(max-width:767px){
+	.header_content_list a{
+		font-size: 15px;
+	}
+	.header{
+			padding: 31px 0;
+	}
+	.info{
+		height: 450px;
+	}
+	.info_section{
+		padding-top: 40px;
+		display: flex;
+		text-align: center;
+	}
+
+	#info_section_about_1{
+		text-indent: 0;
+	}
+	#info_section_about_1>br{
+		display: none;
+	}
+	.info_section_about{
+		font-size: 15px;
+	}
+	.skills_text{
+		padding: 50px 0;
+	}
+	.skills{
+		height: 450px;
+	}
+	/* #aboutme_up{
+		font-size:15px;
+	} */
+}
