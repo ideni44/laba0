@@ -2,25 +2,26 @@
   "name": "laba0",
   "version": "1.0.0",
   "description": "",
-  "main": "js/script.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html --open",
-    "build": "parcel build index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack serve --mode development --open"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ideni44/laba0.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ideni44/laba0/issues"
   },
   "homepage": "https://github.com/ideni44/laba0#readme",
+  "dependencies": {
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
-    "sass": "^1.42.1"
+    "html-webpack-plugin": "^5.4.0"
   }
 }
